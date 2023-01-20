@@ -7,7 +7,7 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число n: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-int Ack(int m, int n)
+int Ack(int n, int m)
 {
     if (n == 0)
         return m + 1;
@@ -18,7 +18,7 @@ int Ack(int m, int n)
     if (n > 0 && m > 0)
         return Ack(n - 1, Ack(n, m - 1));
 
-    return Ack(m, n);
+    return Ack(n, m);
 }
-int result = Ack(m, n);
+int result = Ack(n, m);
 Console.WriteLine($"{result}.");
